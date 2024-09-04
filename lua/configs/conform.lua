@@ -16,9 +16,10 @@ local options = {
                 IndentWidth: 4, \
                 TabWidth: 4, \
                 UseTab: Never, \
-                AccessModifierOffset: 0, \
-                IndentAccessModifiers: true, \
+                AccessModifierOffset: -4, \
+                IndentAccessModifiers: false, \
                 }",
+                -- "-style=microsoft",
             },
         },
         black = {

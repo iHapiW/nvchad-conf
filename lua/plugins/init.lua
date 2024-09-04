@@ -58,6 +58,12 @@ return {
         end,
     },
 
+    -- Tmux-Neovim Navigation
+    {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
+    },
+
     -- Competitive Programming
     {
         "xeluxee/competitest.nvim",
