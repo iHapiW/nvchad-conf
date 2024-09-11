@@ -26,7 +26,7 @@ for _, lsp in ipairs(default_servers) do
 end
 
 -- lua-ls configuration
-require("lspconfig").lua_ls.setup({
+lspconfig.lua_ls.setup({
     on_attach = nvlsp.on_attach,
     on_init = nvlsp.on_init,
     capabilities = nvlsp.capabilities,
