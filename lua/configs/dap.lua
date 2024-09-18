@@ -4,7 +4,7 @@ local map = vim.keymap.set
 map("n", "<Leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle DAP Breakpoint" })
 map("n", "<Leader>dr", "<cmd> DapContinue <CR>", { desc = "Start or Continue DAP" })
 map("n", "<Leader>dn", "<cmd> DapStepOver <CR>", { desc = "Step Over DAP" })
-map("n", "<Leader>ds", "<cmd> DapStepInto <CR>", { desc = "Step Into DAP" })
+map("n", "<Leader>di", "<cmd> DapStepInto <CR>", { desc = "Step Into DAP" })
 map("n", "<Leader>df", "<cmd> DapStepOut <CR>", { desc = "Step Out DAP" })
 map("n", "<Leader>dq", "<cmd> DapTerminate <CR>", { desc = "Terminate DAP" })
 

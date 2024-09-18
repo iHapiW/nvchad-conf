@@ -25,6 +25,22 @@ for _, lsp in ipairs(default_servers) do
     })
 end
 
+-- Python-lsp-server
+-- lspconfig.pylsp.setup({
+--     on_attach = nvlsp.on_attach,
+--     on_init = nvlsp.on_init,
+--     capabilities = nvlsp.capabilities,
+--     settings = {
+--         pylsp = {
+--             plugins = {
+--                 rope_autoimport = {
+--                     enabled = true,
+--                 },
+--             },
+--         },
+--     },
+-- })
+
 -- lua-ls configuration
 lspconfig.lua_ls.setup({
     on_attach = nvlsp.on_attach,

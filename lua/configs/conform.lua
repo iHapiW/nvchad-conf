@@ -3,7 +3,8 @@ local options = {
         lua = { "stylua" },
         c = { "clang-format" },
         cpp = { "clang-format" },
-        python = { "isort", "black" },
+        -- python = { "isort", "black" },
+        python = { "black" },
         rust = { "rustfmt" },
     },
 
@@ -30,12 +31,12 @@ local options = {
                 "80",
             },
         },
-        isort = {
-            prepend_args = {
-                "--profile",
-                "black",
-            },
-        },
+        -- isort = {
+        --     prepend_args = {
+        --         "--profile",
+        --         "black",
+        --     },
+        -- },
     },
 
     -- Comment to not format on save
