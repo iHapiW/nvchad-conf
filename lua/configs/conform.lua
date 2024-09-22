@@ -14,14 +14,14 @@ local options = {
                 -- Add below to end of list to achieve it
                 -- PackConstructorInitializers: Never \
                 "-style={ \
+                BasedOnStyle: Google, \
                 IndentWidth: 4, \
                 TabWidth: 4, \
                 UseTab: Never, \
                 AccessModifierOffset: -4, \
                 IndentAccessModifiers: false, \
-                AllowShortFunctionsOnASingleLine: Empty, \
                 }",
-                -- "-style=microsoft",
+                -- AllowShortFunctionsOnASingleLine: Empty, \
             },
         },
         black = {
