@@ -103,4 +103,15 @@ return {
         "christoomey/vim-tmux-navigator",
         lazy = false,
     },
+
+    -- C++ Tools
+    {
+        "Badhi/nvim-treesitter-cpp-tools",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        ft = "cpp",
+        opts = function()
+            return require("configs.cpp-tools")
+        end,
+        config = true,
+    },
 }
