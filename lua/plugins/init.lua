@@ -8,6 +8,23 @@ return {
         end,
     },
 
+    -- UFO & statuscol for folding
+    {
+        "kevinhwang91/nvim-ufo",
+        dependencies = "kevinhwang91/promise-async",
+        event = "BufReadPost",
+        config = function()
+            require("configs.ufo")
+        end,
+    },
+    {
+        "luukvbaal/statuscol.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("configs.statuscol")
+        end,
+    },
+
     -- LSP Support
     {
         "neovim/nvim-lspconfig",

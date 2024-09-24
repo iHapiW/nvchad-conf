@@ -38,9 +38,20 @@ end)
 
 -- My Personal Configurations
 
+-- Assembly filetype detection
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     pattern = { "*.s", "*.S", "*.nasm", "*.asm" },
     callback = function()
         vim.bo.filetype = "nasm"
     end,
 })
+
+-- Suppress vim.treesitter.get_parser warning for neovim 0.12
+local original_notify = vim.notify
+
+vim.notify = function(msg, level, opts)
+    if msg:match("vim.treesitter.get_parser will return nil instead of raising an error") then
+        return
+    end
+    return original_notify(msg, level, opts)
+end
