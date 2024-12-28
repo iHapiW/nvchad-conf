@@ -11,10 +11,11 @@ lspconfig.servers = {
     "clangd",
     "pyright",
     "rust_analyzer",
+    "opencl_ls",
 }
 
 -- Servers to default configure
-local default_servers = { "pyright", "rust_analyzer" }
+local default_servers = { "pyright", "rust_analyzer", "opencl_ls" }
 
 -- Default configure
 for _, lsp in ipairs(default_servers) do

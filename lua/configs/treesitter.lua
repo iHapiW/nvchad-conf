@@ -1,5 +1,6 @@
 local options = {
     ensure_installed = {
+        "arduino",
         "bash",
         "c",
         "cmake",
@@ -28,3 +29,10 @@ local options = {
 }
 
 require("nvim-treesitter.configs").setup(options)
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = { "*.html", "*.htm", "*.jinja", "*.jinja2", "*.j2" },
+    callback = function()
+        vim.bo.filetype = "html" -- Set filetype to HTML for syntax highlighting
+    end,
+})
