@@ -11,7 +11,7 @@ local options = {
         "luadoc",
         "make",
         "markdown",
-        "nasm",
+        "asm",
         "printf",
         "python",
         "rust",

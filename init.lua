@@ -42,7 +42,7 @@ end)
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     pattern = { "*.s", "*.S", "*.nasm", "*.asm" },
     callback = function()
-        vim.bo.filetype = "nasm"
+        vim.bo.filetype = "asm"
     end,
 })
 
