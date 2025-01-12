@@ -131,4 +131,26 @@ return {
         end,
         config = true,
     },
+
+    -- PlatformIO for Embedded Software Programming
+    {
+        "anurag3301/nvim-platformio.lua",
+        dependencies = {
+            { "akinsho/nvim-toggleterm.lua" },
+            { "nvim-telescope/telescope.nvim" },
+            { "nvim-lua/plenary.nvim" },
+        },
+        opts = function()
+            return require("configs.platformio")
+        end,
+        cmd = {
+            "Pioinit",
+            "Piorun",
+            "Piocmd",
+            "Piolib",
+            "Piomon",
+            "Piodebug",
+            "Piodb",
+        },
+    },
 }

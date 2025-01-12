@@ -8,14 +8,14 @@ local nvlsp = require("nvchad.configs.lspconfig")
 -- also used in mason-lspconfig
 lspconfig.servers = {
     "lua_ls",
-    "clangd",
+    "ccls",
     "pyright",
     "rust_analyzer",
     "opencl_ls",
 }
 
 -- Servers to default configure
-local default_servers = { "pyright", "rust_analyzer", "opencl_ls" }
+local default_servers = { "pyright", "rust_analyzer", "opencl_ls", "ccls" }
 
 -- Default configure
 for _, lsp in ipairs(default_servers) do
@@ -70,12 +70,12 @@ lspconfig.lua_ls.setup({
 })
 
 -- clangd configuration
-lspconfig.clangd.setup({
-    on_attach = function(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
-        client.server_capabilities.documentRangeFormattingProvider = false
-        nvlsp.on_attach(client, bufnr)
-    end,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-})
+-- lspconfig.clangd.setup({
+--     on_attach = function(client, bufnr)
+--         client.server_capabilities.documentFormattingProvider = false
+--         client.server_capabilities.documentRangeFormattingProvider = false
+--         nvlsp.on_attach(client, bufnr)
+--     end,
+--     on_init = nvlsp.on_init,
+--     capabilities = nvlsp.capabilities,
+-- })
