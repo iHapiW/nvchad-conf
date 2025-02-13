@@ -20,6 +20,7 @@ local options = {
                 UseTab: Never, \
                 AccessModifierOffset: -4, \
                 IndentAccessModifiers: false, \
+                AllowShortFunctionsOnASingleLine: false \
                 }",
                 -- AllowShortFunctionsOnASingleLine: Empty, \
             },
